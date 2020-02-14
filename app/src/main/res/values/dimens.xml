@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_width">@dimen/_100sdp</dimen>
+    <dimen name="fab_height">@dimen/_100sdp</dimen>
+    <dimen name="radius_large">120dp</dimen>
+</resources>

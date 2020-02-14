@@ -1,0 +1,98 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Widget.BottomNavigationView" parent="Widget.Design.BottomNavigationView">
+<!--        <item name="android:textSize">@dimen/nav_text_size</item>-->
+<!--        <item name="android:fontFamily">@font/droid_arabic_kufi_regular_style</item>-->
+        <item name="textAllCaps">false</item>
+
+    </style>
+
+    <style name="BottomNavigationView">
+        <item name="itemTextAppearanceActive">@style/TextAppearance.BottomNavigationView.Active</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.BottomNavigationView.Inactive</item>
+<!--        <item name="android:textSize">@dimen/nav_text_size</item>-->
+<!--        <item name="android:fontFamily">@font/droid_arabic_kufi_regular_style</item>-->
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="TextAppearance"/>
+    <style name="TextAppearance.BottomNavigationView"/>
+    <style name="TextAppearance.BottomNavigationView.Inactive">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="TextAppearance.BottomNavigationView.Active">
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="floatingActionButtonStyle">
+        <item name="colorAccent">@color/move_color</item>
+    </style>
+
+<!--    <style name="ToolbarTheme" parent="Theme.AppCompat.Light.NoActionBar">-->
+<!--        <item name="android:textColorPrimary">@android:color/transparent</item>-->
+<!--        <item name="android:textColorSecondary">@android:color/transparent</item>-->
+<!--        <item name="android:background">@android:color/transparent</item>-->
+<!--        &lt;!&ndash;<item name="android:background">@color/gray_background</item>&ndash;&gt;-->
+<!--        <item name="android:textColor">@android:color/transparent</item>-->
+<!--        <item name="colorPrimaryDark">@android:color/transparent</item>-->
+<!--    </style>-->
+
+    <style name="ToolbarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/color_main_text</item>
+        <item name="android:textColorSecondary">@color/color_white</item>
+        <item name="android:editTextColor">@color/red_color</item>
+        <item name="android:editTextBackground">@color/color_tranparent</item>
+        <item name="android:itemBackground">@color/red_color</item>
+        <item name="colorPrimaryDark">@color/red_color</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:textColorHint">@color/tint_gray_line</item>
+        <item name="android:textColor">@color/color_text_secondry</item>
+        <item name="colorControlNormal">@color/color_white</item>
+        <item name="colorControlActivated">@color/color_tranparent</item>
+        <item name="colorControlHighlight">@color/color_tranparent</item>
+    </style>
+
+
+
+    <style name="TransparentProgressDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+    <style name="AppThemeBtn" parent="@android:style/Widget.PopupMenu">
+        <item name="android:actionButtonStyle">@style/MyActionButtonStyle</item>
+    </style>
+
+    <style name="MyActionButtonStyle" parent="@android:style/Widget.PopupMenu">
+        <item name="android:minWidth">20dip</item>
+        <item name="android:padding">0dip</item>
+    </style>
+
+    <style name="overscroll_remove" parent="android:Widget.ScrollView">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:overScrollMode">never</item>
+        <item name="android:scrollbars">none</item>
+    </style>
+
+
+</resources>
+

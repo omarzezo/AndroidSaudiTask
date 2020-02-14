@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/_8sdp"
+    android:paddingEnd="@dimen/_8sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/hotels_relative_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <android.support.constraint.ConstraintLayout
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_alignParentStart="true"
+        android:id="@+id/title_relative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_centerVertical="true"
+            android:id="@+id/img_hotels"
+            android:src="@drawable/hotspot_icon"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_14sdp"/>
+
+        <TextView
+            app:layout_constraintEnd_toStartOf="@id/img_hotels"
+            app:layout_constraintTop_toTopOf="@id/img_hotels"
+            app:layout_constraintBottom_toBottomOf="@id/img_hotels"
+            android:layout_centerVertical="true"
+            android:id="@+id/title_txt_hotels"
+            android:textColor="@color/gray_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:textSize="@dimen/_14sdp"
+            android:textAllCaps="false"
+            android:text="Hotspots"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_toRightOf="@id/img_hotels"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/hotsposts_view_all_relative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/hotsposts_view_all_txt"
+            android:id="@+id/img_view_all"
+            android:src="@drawable/view_all_icon"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_14sdp"/>
+
+
+        <TextView
+            app:layout_constraintStart_toEndOf="@id/img_view_all"
+            app:layout_constraintTop_toTopOf="@id/img_view_all"
+            app:layout_constraintBottom_toBottomOf="@id/img_view_all"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_centerVertical="true"
+            android:id="@+id/hotsposts_view_all_txt"
+            android:textColor="@color/move_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:textSize="@dimen/_14sdp"
+            android:textAllCaps="false"
+            android:text="View all"
+            android:layout_marginStart="@dimen/_6sdp"
+            />
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:clipToPadding="false"
+        style="@style/overscroll_remove"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_below="@id/hotels_relative_parent"
+        android:id="@+id/hotspots_data_rv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_below="@id/hotspots_data_rv"
+        android:id="@+id/events_relative_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.constraint.ConstraintLayout
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_alignParentStart="true"
+            android:id="@+id/title_relative_events"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_centerVertical="true"
+                android:id="@+id/img_events"
+                android:src="@drawable/events_icon"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_14sdp"/>
+
+            <TextView
+                app:layout_constraintEnd_toStartOf="@id/img_events"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/img_events"
+                android:layout_centerVertical="true"
+                android:id="@+id/title_txt_events"
+                android:textColor="@color/gray_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="@dimen/_14sdp"
+                android:textAllCaps="false"
+                android:text="Events"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_toRightOf="@id/img_events"/>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/view_all_relative_events"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/events_view_all_txt"
+                android:id="@+id/img_view_all_events"
+                android:src="@drawable/view_all_icon"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_14sdp"/>
+
+
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/img_view_all_events"
+                app:layout_constraintStart_toEndOf="@id/img_view_all_events"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_centerVertical="true"
+                android:id="@+id/events_view_all_txt"
+                android:textColor="@color/move_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="@dimen/_14sdp"
+                android:textAllCaps="false"
+                android:text="View all"
+                android:layout_marginStart="@dimen/_6sdp"
+                />
+
+
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:clipToPadding="false"
+        style="@style/overscroll_remove"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_below="@id/events_relative_parent"
+        android:id="@+id/events_data_rv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_marginTop="@dimen/_24sdp"
+        android:layout_below="@id/events_data_rv"
+        android:id="@+id/attractions_relative_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <android.support.constraint.ConstraintLayout
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_alignParentStart="true"
+            android:id="@+id/title_relative_attractions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_centerVertical="true"
+                android:id="@+id/img_attractions"
+                android:src="@drawable/attarctions_icon"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_14sdp"/>
+
+            <TextView
+                app:layout_constraintEnd_toStartOf="@id/img_attractions"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/img_attractions"
+                android:layout_centerVertical="true"
+                android:id="@+id/title_txt_attractions"
+                android:textColor="@color/gray_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="@dimen/_14sdp"
+                android:textAllCaps="false"
+                android:text="Attractions"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:layout_toRightOf="@id/img_attractions"/>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/view_all_relative_attractions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/attractions_view_all_txt"
+                android:id="@+id/img_view_all_attractions"
+                android:src="@drawable/view_all_icon"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_14sdp"/>
+
+
+            <TextView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/img_view_all_attractions"
+                app:layout_constraintStart_toEndOf="@id/img_view_all_attractions"
+                android:layout_marginEnd="@dimen/_4sdp"
+                android:layout_centerVertical="true"
+                android:id="@+id/attractions_view_all_txt"
+                android:textColor="@color/move_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="normal"
+                android:textSize="@dimen/_14sdp"
+                android:textAllCaps="false"
+                android:text="View all"
+                android:layout_marginStart="@dimen/_6sdp"
+                />
+
+
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:clipToPadding="false"
+        style="@style/overscroll_remove"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_below="@id/attractions_relative_parent"
+        android:id="@+id/attractions_data_rv"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_main_text">#263238</color>
+    <color name="color_white">#ffffff</color>
+    <color name="color_green">#1d7041</color>
+    <color name="color_green_light">#4EA26F</color>
+    <color name="color_tranparent">@android:color/transparent</color>
+    <color name="color_border_btn">#116937</color>
+    <color name="tint_gray_line">#b7b7b7</color>
+    <color name="color_text_secondry">#5c5959</color>
+    <color name="green_text">#135d2c</color>
+    <color name="red_color">#ff3229</color>
+    <color name="yellow_color">#FFA200</color>
+    <color name="move_color">#5e0851</color>
+    <color name="gray_color">#8b878c</color>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#3459ab</color>
+    <color name="semi_transparent_black">#1A2F5C</color>
+    <color name="colorAccent">#C7AA00</color>
+    <color name="colorBar">#1A2F5C</color>
+    <color name="popup">#810808</color>
+    <color name="textColor">#cbcbcb</color>
+
+    <color name="textColor2">#2b2b2b</color>
+
+    <color name="transparent_media">#80000000</color>
+    <color name="popup_quran">#005692</color>
+    <color name="black">#000000</color>
+
+
+    <!-- Screens background color-->
+    <color name="bg_screen1">#f64c73</color>
+    <color name="bg_screen2">#20d2bb</color>
+    <color name="bg_screen3">#3395ff</color>
+    <color name="bg_screen4">#c873f4</color>
+    <color name="bg_screen5">#ebdfc2</color>
+    <color name="bg">#f7f2df</color>
+    <color name="bg3">#ff0000</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">#d1395c</color>
+    <color name="dot_dark_screen2">#14a895</color>
+    <color name="dot_dark_screen3">#2278d4</color>
+    <color name="dot_dark_screen4">#a854d4</color>
+    <color name="transparent_light_gray">#99868686</color>
+    <color name="white">#FFFFFF</color>
+    <color name="light_yellow">#E3DBB8</color>
+    <color name="blue">#015189</color>
+    <color name="white2">#F5F5F3</color>
+    <!--<color name="white3">#99ffffff</color>-->
+    <color name="white3">#64FFFFFF</color>
+    <color name="dark_orange">#ec7800</color>
+    <color name="light_orange">#ec9500</color>
+    <color name="light_orange2">#BF9C30</color>
+    <color name="light_gray">#868686</color>
+    <color name="light_gray_1">#D1D0D0</color>
+    <color name="dark_gray">#424242</color>
+    <color name="red">#8A171A</color>
+    <color name="gray">#504C51</color>
+    <color name="gray2">#ABB1BA</color>
+    <color name="gray3">#cbcbcb</color>
+    <color name="highlightColor">#33eee963</color>
+
+    <!-- dots active colors -->
+    <color name="dot_light_screen1">#f98da5</color>
+    <color name="dot_light_screen2">#8cf9eb</color>
+    <color name="dot_light_screen3">#93c6fd</color>
+    <color name="dot_light_screen4">#e4b5fc</color>
+
+    <!-- quraan -->
+    <color name="quraan_words">#8D773A</color>
+    <color name="quraan_words_dark">#695621</color>
+    <color name="quraan_wordsa">#F3EBDA</color>
+    <color name="quraan_words_darka">#e1d1b1</color>
+    <color name="edittext_search_quraan">#E3DBB7</color>
+    <color name="selected">#0c41b3</color>
+    <color name="unselected">#07325F</color>
+    <color name="unselected2">#2A92DC</color>
+    <color name="unselected3">#1A6DA4</color>
+
+
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+        <item>@color/dot_light_screen4</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+        <item>@color/dot_dark_screen4</item>
+    </array>
+
+
+    <!--/new colors-->
+    <color name="border_color">#080028</color>
+    <color name="colorBarNew">#FFFFFF</color>
+    <color name="whiteNew">#FFFFFF</color>
+
+    <color name="blue_btn_login">#4267b2</color>
+    <color name="blue_btn">#005792</color>
+    <!--005792-->
+    <color name="blue_twitter_btn">#03a9f4</color>
+
+    <color name="black_txt">#2b2b2b</color>
+    <color name="gray_line">#cbcbcb</color>
+
+    <color name="blue_title">#005792</color>
+
+
+    <color name="color_bottombar_text">#005792</color>
+    <color name="color_bottombar_background">#ffffff</color>
+
+    <color name="color_text_demo">#00375d</color>
+    <color name="color_sura">#00375d</color>
+    <color name="transparent_color">#00000000</color>
+
+    <color name="black_dark">#010203</color>
+
+    <color name="color_background_listenn">#FFD279</color>
+
+
+    <color name="gray_back">#ffdfdfdf</color>
+    <!--<color name="color_background_listennn">#edd29c</color>-->
+    <!--<color name="color_background_listenn">#FFD279</color>-->
+</resources>

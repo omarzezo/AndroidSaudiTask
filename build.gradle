@@ -1,0 +1,32 @@
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://maven.fabric.io/public' }
+        maven { url "https://jitpack.io" }
+
+//        maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/' }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.2'
+
+    }
+}
+
+allprojects {
+    buildDir = "C:/tmp/${rootProject.name}/${project.name}"
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://maven.fabric.io/public' }
+
+    }
+}
+
+wrapper{
+    gradleVersion = '5.1'
+    distributionType = Wrapper.DistributionType.BIN
+}

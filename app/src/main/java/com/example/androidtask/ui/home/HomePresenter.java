@@ -1,9 +1,7 @@
 package com.example.androidtask.ui.home;
 
-import android.util.Log;
-
 import com.example.androidtask.data.DataManager;
-import com.example.androidtask.data.model.HomeResponseModel;
+import com.example.androidtask.data.model.UsersPojoResponse;
 import com.example.androidtask.ui.base.BasePresenter;
 import com.example.androidtask.util.RxUtil;
 
@@ -11,7 +9,6 @@ import javax.inject.Inject;
 
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import timber.log.Timber;
@@ -37,25 +34,27 @@ public class HomePresenter extends BasePresenter<HomeMvpView> {
     }
 
 
-    public void getHomeData() {
+    public void getHomeData(Integer offset ,Integer limit) {
         checkViewAttached();
         RxUtil.dispose(mDisposable);
         getMvpView().showLoader();
-        mDataManager.getHomeData()
+        mDataManager.getHomeData(offset, limit)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
-                .subscribe(new Observer<HomeResponseModel>() {
+                .subscribe(new Observer<UsersPojoResponse>() {
                     @Override
                     public void onSubscribe(Disposable d) {
                         mDisposable=d;
                     }
 
                     @Override
-                    public void onNext(HomeResponseModel homeResponseModel) {
+                    public void onNext(UsersPojoResponse usersPojoResponse) {
 
-                        if (homeResponseModel != null && homeResponseModel.getMessage().equals("success")&& homeResponseModel.getData()!=null){
-                            getMvpView().returnHomeData(homeResponseModel);
-
+                        if (usersPojoResponse != null && usersPojoResponse.isStatus()&& usersPojoResponse.getData()!=null){
+                            getMvpView().returnHomeData(usersPojoResponse);
+                            if (!usersPojoResponse.getData().isHas_more()){
+                                getMvpView().showEmpty();
+                            }
                         } else {
                             getMvpView().showEmpty();
                         }

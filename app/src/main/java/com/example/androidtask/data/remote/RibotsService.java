@@ -1,6 +1,6 @@
 package com.example.androidtask.data.remote;
 
-import com.example.androidtask.data.model.HomeResponseModel;
+import com.example.androidtask.data.model.UsersPojoResponse;
 import com.example.androidtask.util.Constants;
 import com.example.androidtask.util.MyGsonTypeAdapterFactory;
 import com.google.gson.Gson;
@@ -16,6 +16,7 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 import retrofit2.http.GET;
+import retrofit2.http.Query;
 
 
 public interface RibotsService {
@@ -23,8 +24,8 @@ public interface RibotsService {
 
 
 
-    @GET("home")
-    Observable<HomeResponseModel> getHomeData();
+    @GET("users")
+    Observable<UsersPojoResponse> getHomeData(@Query("offset") Integer offset ,@Query("limit") Integer limit);
 
 
     /******** Helper class that sets up a new services *******/

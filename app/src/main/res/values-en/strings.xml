@@ -3,7 +3,4 @@
     <string name="app_name">AndroidTask</string>
     <string name="no_internet">there is no internet</string>
 
-    <style name="hotspots">Hotspots</style>
-    <style name="events">Events</style>
-    <style name="attractions">Attractions</style>
 </resources>

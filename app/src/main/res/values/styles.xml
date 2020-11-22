@@ -48,10 +48,10 @@
     <style name="ToolbarTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:textColorPrimary">@color/color_main_text</item>
         <item name="android:textColorSecondary">@color/color_white</item>
-        <item name="android:editTextColor">@color/red_color</item>
-        <item name="android:editTextBackground">@color/color_tranparent</item>
-        <item name="android:itemBackground">@color/red_color</item>
-        <item name="colorPrimaryDark">@color/red_color</item>
+        <item name="android:editTextColor">@color/color_main_text</item>
+        <item name="android:editTextBackground">@color/red</item>
+        <item name="android:itemBackground">@color/red</item>
+        <item name="colorPrimaryDark">@color/red</item>
         <item name="android:windowDisablePreview">true</item>
         <item name="android:textColorHint">@color/tint_gray_line</item>
         <item name="android:textColor">@color/color_text_secondry</item>

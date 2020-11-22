@@ -3,7 +3,7 @@ package com.example.androidtask.data;
 
 import com.example.androidtask.data.local.DatabaseHelper;
 import com.example.androidtask.data.local.PreferencesHelper;
-import com.example.androidtask.data.model.HomeResponseModel;
+import com.example.androidtask.data.model.UsersPojoResponse;
 import com.example.androidtask.data.remote.RibotsService;
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -29,8 +29,8 @@ public class DataManager {
     }
 
 
-    public Observable<HomeResponseModel> getHomeData() {
-        return mRibotsService.getHomeData().distinct();
+    public Observable<UsersPojoResponse> getHomeData(Integer offset , Integer limit) {
+        return mRibotsService.getHomeData(offset,limit).distinct();
     }
 
 

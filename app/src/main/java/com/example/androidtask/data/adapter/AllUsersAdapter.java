@@ -62,7 +62,7 @@ public class AllUsersAdapter extends RecyclerView.Adapter<AllUsersAdapter.MyView
             Glide.with(mContext)
                     .load(singleModel.getImage())
                     .apply(new RequestOptions()
-                            .placeholder(R.drawable.no_image).error(R.drawable.no_image)
+                            .placeholder(R.raw.loading_img).error(R.drawable.no_image)
                     )
                     .into(holder.user_img);
         }

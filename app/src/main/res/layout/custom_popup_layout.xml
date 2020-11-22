@@ -13,7 +13,7 @@
             android:layout_marginStart="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_10sdp"
             android:id="@+id/events_frame"
-            android:background="@drawable/circle_popup_background"
+            android:background="@drawable/ic_add_shopping_cart_black_24dp"
             android:layout_width="@dimen/_45sdp"
             android:layout_height="@dimen/_45sdp">
 

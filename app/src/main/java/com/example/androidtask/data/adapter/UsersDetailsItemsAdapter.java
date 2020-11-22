@@ -62,7 +62,7 @@ public class UsersDetailsItemsAdapter extends RecyclerView.Adapter<UsersDetailsI
             Glide.with(mContext)
                     .load(singleModel)
                     .apply(new RequestOptions()
-                            .placeholder(R.drawable.no_image).error(R.drawable.no_image)
+                            .placeholder(R.raw.loading_img).error(R.drawable.no_image)
                     )
                     .into(holder.user_details_img);
         }

@@ -1,9 +1,11 @@
 package com.example.androidtask.data.adapter;
 
 import android.content.Context;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,11 +60,16 @@ public class AllUsersAdapter extends RecyclerView.Adapter<AllUsersAdapter.MyView
             holder.user_name_txt.setText(singleModel.getName());
         }
 
+        CircularProgressDrawable circularProgressDrawable =  new CircularProgressDrawable(mContext);
+        circularProgressDrawable.setStrokeWidth(5f);
+        circularProgressDrawable.setCenterRadius(30f);
+        circularProgressDrawable.start();
+
         if (singleModel.getImage()!=null) {
             Glide.with(mContext)
                     .load(singleModel.getImage())
                     .apply(new RequestOptions()
-                            .placeholder(R.raw.loading_img).error(R.drawable.no_image)
+                            .placeholder(circularProgressDrawable).error(R.drawable.no_image)
                     )
                     .into(holder.user_img);
         }

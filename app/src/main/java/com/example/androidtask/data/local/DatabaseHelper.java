@@ -2,9 +2,8 @@ package com.example.androidtask.data.local;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.support.annotation.VisibleForTesting;
+import androidx.annotation.VisibleForTesting;
 
-import com.example.androidtask.data.local.DbOpenHelper;
 import com.example.androidtask.data.model.Ribot;
 import com.squareup.sqlbrite2.BriteDatabase;
 import com.squareup.sqlbrite2.SqlBrite;

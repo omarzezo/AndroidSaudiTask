@@ -2,7 +2,7 @@ package com.example.androidtask.data.adapter;
 
 import android.app.Activity;
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,12 +10,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
+
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.androidtask.R;
 
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class UsersDetailsItemsAdapter extends RecyclerView.Adapter<UsersDetailsItemsAdapter.MyViewHolder> {
@@ -58,11 +59,17 @@ public class UsersDetailsItemsAdapter extends RecyclerView.Adapter<UsersDetailsI
             }
         });
 
+        CircularProgressDrawable circularProgressDrawable =  new CircularProgressDrawable(mContext);
+        circularProgressDrawable.setStrokeWidth(5f);
+        circularProgressDrawable.setCenterRadius(30f);
+        circularProgressDrawable.start();
+
         if (singleModel!=null) {
             Glide.with(mContext)
                     .load(singleModel)
                     .apply(new RequestOptions()
-                            .placeholder(R.raw.loading_img).error(R.drawable.no_image)
+//                            .placeholder(R.raw.loading_img).error(R.drawable.no_image)
+                            .placeholder(circularProgressDrawable).error(R.drawable.no_image)
                     )
                     .into(holder.user_details_img);
         }

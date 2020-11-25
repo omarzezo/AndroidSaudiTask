@@ -1,8 +1,8 @@
 package com.example.androidtask.ui.base;
 
 import android.os.Bundle;
-import android.support.v4.util.LongSparseArray;
-import android.support.v7.app.AppCompatActivity;
+import androidx.collection.LongSparseArray;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.androidtask.data.Application;
 import com.example.androidtask.injection.component.ActivityComponent;

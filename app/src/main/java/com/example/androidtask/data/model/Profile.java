@@ -1,9 +1,8 @@
 package com.example.androidtask.data.model;
 
 import android.os.Parcelable;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
-import com.example.androidtask.data.model.Name;
 import com.google.auto.value.AutoValue;
 import com.google.gson.Gson;
 import com.google.gson.TypeAdapter;

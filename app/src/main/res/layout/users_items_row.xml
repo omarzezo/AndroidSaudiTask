@@ -3,10 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layoutDirection="ltr"
-    android:layout_marginTop="@dimen/_10sdp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
+        android:layout_marginTop="@dimen/_10sdp"
         android:id="@+id/user_parent_relaive"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -44,4 +44,5 @@
         app:layout_constraintTop_toBottomOf="@+id/user_parent_relaive"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

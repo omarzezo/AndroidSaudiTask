@@ -2,11 +2,15 @@ package com.example.androidtask.data.adapter;
 
 import android.app.Activity;
 import android.content.Context;
+
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -76,46 +80,24 @@ public class UsersDetailsItemsAdapter extends RecyclerView.Adapter<UsersDetailsI
 
         if (imgList!=null) {
             if (imgList.size() % 2 != 0) {
+                displaymetrics = new DisplayMetrics();
+                ((Activity) mContext).getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
+                int devicewidth = displaymetrics.widthPixels;
+                int deviceheight = displaymetrics.heightPixels / 2;
                 if (position == 0) {
-                    displaymetrics = new DisplayMetrics();
-                    ((Activity) mContext).getWindowManager().getDefaultDisplay().getMetrics(displaymetrics);
-                    int devicewidth = displaymetrics.widthPixels;
-                    int deviceheight = displaymetrics.heightPixels / 2;
-                    holder.user_details_img.getLayoutParams().width = ViewGroup.LayoutParams.MATCH_PARENT;
-                    holder.user_details_img.getLayoutParams().height = deviceheight;
+                    holder.user_details_img.getLayoutParams().height=deviceheight+60;
+//                    holder.user_details_img.getLayoutParams().width=holder.user_details_img.getLayoutParams().width*2;
+//                    holder.user_details_img.getLayoutParams().width = devicewidth;
+//                    holder.user_details_img.getLayoutParams().height = deviceheight;
+//                    Log.e("deviceheight",deviceheight+"");
+//                    Log.e("devicewidth",devicewidth+"");
+
+                }else {
+//                    holder.user_details_img.getLayoutParams().width = (devicewidth/2);
+//                    holder.user_details_img.getLayoutParams().height = (deviceheight/2)-30;
                 }
             }
         }
-//        if (position==0){
-//            holder.user_parent_details_img.setVisibility(View.VISIBLE);
-////                Glide.with(mContext)
-////                        .load(imgList.get(0))
-////                        .apply(new RequestOptions()
-////                                .placeholder(R.drawable.no_image).error(R.drawable.no_image)
-////                        )
-////                        .into(holder.user_parent_details_img);
-////                imgList.remove(0);
-//        }else {
-//            holder.user_parent_details_img.setVisibility(View.GONE);
-//        }
-//        if (imgList!=null){
-//            if (imgList.size()%2!=0){
-//                if (position==0){
-//                    holder.user_parent_details_img.setVisibility(View.VISIBLE);
-//                        Glide.with(mContext)
-//                                .load(imgList.get(0))
-//                                .apply(new RequestOptions()
-//                                        .placeholder(R.drawable.no_image).error(R.drawable.no_image)
-//                                )
-//                                .into(holder.user_details_img);
-//
-//                }else {
-//                    holder.user_parent_details_img.setVisibility(View.GONE);
-//                }
-//            }
-//        }
-
-
     }
 
     @Override
@@ -127,6 +109,7 @@ public class UsersDetailsItemsAdapter extends RecyclerView.Adapter<UsersDetailsI
     class MyViewHolder extends RecyclerView.ViewHolder{
 
         ImageView user_details_img ;
+        ConstraintLayout constraint_layout;
 
 
         public MyViewHolder(View itemView) {
